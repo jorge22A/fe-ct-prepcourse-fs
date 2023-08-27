@@ -71,19 +71,59 @@ function asAmirror(frase) {
    // La diferencia es que cada palabra estará escrita al inverso.
    // [EJEMPLO]: "The Henry Challenge is close!"  ---> "ehT yrneH egnellahC si !esolc"
    // Tu código:
-}
+   let cadena = frase.split(' ')
+
+ 
+   let cadenaInvertida = cadena.map(palabra => {
+     
+     return palabra.split('').reverse().join('')
+   })
+ 
+  
+   const fraseInvertida = cadenaInvertida.join(' ')
+ 
+   console.log( fraseInvertida)
+ }
+ asAmirror('Carpe diem')
+
+
 
 function capicua(numero) {
    // Si el número que recibes es capicúa debes retornar el string: "Es capicua".
    // Caso contrario: "No es capicua".
    // Tu código:
-}
+   let astring = (numero).toString()
+    let stringa = astring.split('').reverse().join('')
+    if(astring==stringa){
+      console.log('es capicua')
+    } else{
+      console.log('no es capicua')
+    }
+ }
+ capicua(80008)
+
+
 
 function deleteAbc(string) {
    // Tu tarea es eliminar las letras "a", "b" y "c" del string recibido.
    // Retorna el string sin estas letras.
    // Tu código:
+   let arr=string.split('')
+
+let palabra=''
+
+for(let i=0;i<=arr.length-1;i++){
+ if(arr[i]=='a' || arr[i]=='b' || arr[i]=='c'){
+
+delete(arr[i])}
+
+else {palabra=palabra+arr[i]}
 }
+console.log(palabra)
+}
+deleteAbc('sin a sin b sin c')
+
+
 
 function sortArray(arrayOfStrings) {
    // Recibes un arreglo de strings.
@@ -91,7 +131,14 @@ function sortArray(arrayOfStrings) {
    // de la longitud de cada string.
    // [EJEMPLO]: ["You", "are", "beautiful", "looking"]  ---> [“You", "are", "looking", "beautiful"]
    // Tu código:
+   arrayOfStrings.sort((a, b) => a.length - b.length)
+
+console.log(arrayOfStrings)
 }
+sortArray(["uno", "dos", "tres", "cuatro", "cinco"])
+
+
+
 
 function buscoInterseccion(array1, array2) {
    // Recibes dos arreglos de números.
@@ -100,7 +147,27 @@ function buscoInterseccion(array1, array2) {
    // Si no tienen elementos en común, retornar un arreglo vacío.
    // [PISTA]: los arreglos no necesariamente tienen la misma longitud.
    // Tu código:
-}
+   let arreglo1=[]
+   let arreglo2=[]
+   let arreglo=[]
+   if(array1.length<array2.length){
+     arreglo1=array1
+     arreglo2=array2
+   } else {
+     arreglo1=array2
+     arreglo2=array1
+   }
+   for(let i=0; i<=arreglo1.length;i++){
+     if(arreglo2.includes(arreglo1[i])==true){
+     arreglo.push(arreglo1[i])
+     }
+   }
+   return arreglo
+ }
+ console.log(buscoInterseccion([1,2,3],[5,6,7,8,9]))
+
+
+
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
