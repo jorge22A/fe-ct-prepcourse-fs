@@ -61,7 +61,7 @@ for(let i = 0; i<=mit-1; i++){
 }
 console.log(STR.toUpperCase()+string.slice(mit).toLowerCase())
 }
-capToFront('jorGE')
+capToFront('jorGEE')
 
 
 
