@@ -54,7 +54,17 @@ function capToFront(string) {
    // Retornar el string.
    // [EJEMPLO]: soyHENRY ---> HENRYsoy
    // Tu código:
+   let mit = string.length/2
+let STR=''
+for(let i = 0; i<=mit-1; i++){
+  STR=STR+string[i]
 }
+console.log(STR.toUpperCase()+string.slice(mit).toLowerCase())
+}
+capToFront('jorGE')
+
+
+
 
 function asAmirror(frase) {
    // Recibes una frase. Tu tarea es retornar un nuevo string en el que el orden de las palabras sea el mismo.
